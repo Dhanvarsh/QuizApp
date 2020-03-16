@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TakeTest"
+    android:background="#fff">
+
+
+    <TextView
+       android:layout_marginTop="25dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="QUIZER"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/chewy"
+        android:textSize="25sp"
+        android:textAllCaps="true"/>
+    <LinearLayout
+        android:id="@+id/que_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/minQue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:id="@+id/maxQue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            />
+    </LinearLayout>
+
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/que_count"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:progressBackgroundTint="@color/blue"
+        android:progressTint="@color/blue"
+        android:thumb="@drawable/seekbarthum" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seekbar"
+        android:layout_above="@id/timeinsec">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="What of the following does Environment provide for human development?"
+                android:textSize="18dp"
+                android:layout_margin="15dp"
+                android:textColor="@color/blue"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/optionRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_question"
+                android:layout_margin="15dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/timeinsec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       android:layout_above="@id/timer_layout"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/remainingtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textColor="@color/blue"
+            />
+        <TextView
+            android:id="@+id/totaltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/blue"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/timer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/submitt"
+        android:layout_margin="25dp">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:scaleY="2"
+            android:layout_gravity="center"
+            android:theme="@style/RedAccent"
+            android:background="@android:color/transparent"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:text="Submitt"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

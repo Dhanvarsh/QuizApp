@@ -1,0 +1,35 @@
+{
+	"MCQ": [{
+		"Question": "Which crop is sown on the largest area in India?",
+		"Options": [
+			"Rice",
+			"Wheat",
+			"Sugarcane",
+			"Maize"
+		]
+	}, {
+		"Question": "Entomology is the science that studies",
+		"Options": [
+			"Behaviour of human beings",
+			"Insects",
+			"The origin and history of technical and scientific terms",
+			"The formation of rocks"
+		]
+	}, {
+		"Question": "Grand Central Terminal, Park Avenue, New York is the world's",
+		"Options": [
+			"highest railway station",
+			"longest railway station",
+			"largest railway station",
+			"None of the above"
+		]
+	}, {
+		"Question": "Corey Anderson who has hit the fastest ODI century in 36 balls is from",
+		"Options": [
+			"England",
+			"Australia",
+			"West Indies",
+			"New Zealand"
+		]
+	}]
+}

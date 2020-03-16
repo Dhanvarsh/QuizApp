@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QuizerApp</string>
+    <string-array name="answers">
+        <item>Rice</item>
+        <item>Insects</item>
+        <item>largest railway station</item>
+        <item>New Zealand</item>
+    </string-array>
+</resources>
